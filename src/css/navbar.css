@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  color: rgb(226, 238, 237);
+  width: 100%;
+  height: 80px;
+  background-color: rgb(43, 168, 199);
+}
+
+.navitem {
+  margin-left: 30px;
+}
