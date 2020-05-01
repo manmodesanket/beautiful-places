@@ -1,0 +1,4 @@
+const data = {
+  "locations": "Pune",
+  "state": "MH"
+}
