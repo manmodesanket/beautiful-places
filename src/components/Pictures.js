@@ -25,7 +25,7 @@ class Pictures extends Component {
         data.push(temp);
       });
       this.setState({
-        cards: [...this.state.cards, data],
+        cards: [...data],
       });
     });
     //console.log(data);
@@ -33,20 +33,16 @@ class Pictures extends Component {
 
   render() {
     console.log(this.state.cards);
-    const items = this.state.cards.map((item, key) => (
-      <ul key={key}>
-        <li>{item.city}</li>
-        <li>{item.place}</li>
-      </ul>
-    ));
-
     return (
       <div className="cards">
         <h1>Hello</h1>
-        <ul>{items}</ul>
+        {this.state.cards.map((card, index) => (
+          <p key={index}>
+            Hello, {card.place} from {card.city}!
+          </p>
+        ))}
       </div>
     );
   }
 }
 export default Pictures;
-//7588357481
