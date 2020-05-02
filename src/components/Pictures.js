@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { db } from "../firebase/firebase";
+import Card from "./Card";
 import "../css/pictures.css";
 
 class Pictures extends Component {
@@ -14,11 +15,9 @@ class Pictures extends Component {
     const data = [];
     db.collection("cards").onSnapshot((snapshot) => {
       snapshot.docs.map((doc) => {
-        let city = doc.data().city;
         let img = doc.data().img;
         let place = doc.data().place;
         const temp = {
-          city: city,
           img: img,
           place: place,
         };
@@ -35,11 +34,8 @@ class Pictures extends Component {
     console.log(this.state.cards);
     return (
       <div className="cards">
-        <h1>Hello</h1>
         {this.state.cards.map((card, index) => (
-          <p key={index}>
-            Hello, {card.place} from {card.city}!
-          </p>
+          <Card key={index} data={card} />
         ))}
       </div>
     );
