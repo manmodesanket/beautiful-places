@@ -7,9 +7,11 @@ const Navbar = () => {
       <div className="navitem">
         <h1>Beautiful Places</h1>
       </div>
+      <div className="navitem">
+        <button className="btn">Add a Place</button>
+      </div>
     </nav>
   );
 };
 
 export default Navbar;
-//7588357481

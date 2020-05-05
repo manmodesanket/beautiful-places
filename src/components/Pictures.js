@@ -17,9 +17,13 @@ class Pictures extends Component {
       snapshot.docs.map((doc) => {
         let img = doc.data().img;
         let place = doc.data().place;
+        let temperature = doc.data().temperature;
+        let country = doc.data().country;
         const temp = {
           img: img,
           place: place,
+          temperature: temperature,
+          country: country,
         };
         data.push(temp);
       });
@@ -31,14 +35,22 @@ class Pictures extends Component {
   }
 
   render() {
-    console.log(this.state.cards);
-    return (
-      <div className="cards">
-        {this.state.cards.map((card, index) => (
-          <Card key={index} data={card} />
-        ))}
-      </div>
-    );
+    //console.log(this.state.cards);
+    if (this.state.cards.length != 0) {
+      return (
+        <div className="cards">
+          {this.state.cards.map((card, index) => (
+            <Card key={index} data={card} />
+          ))}
+        </div>
+      );
+    } else if (this.state.cards.length == 0) {
+      return (
+        <div className="loading">
+          <h1>Loading...</h1>
+        </div>
+      );
+    }
   }
 }
 export default Pictures;

@@ -1,13 +1,13 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
+  justify-content: space-evenly;
   margin: 5% 5%;
 }
 
 .card {
   margin-top: 2em;
+  height: 30em;
   border-radius: 0.5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -19,10 +19,38 @@
 
 .cardImg {
   border-radius: 0.5em;
-  width: 25em;
+  width: 20em;
   height: 15em;
 }
 
 .place {
   text-align: center;
+}
+
+.loading {
+  text-align: center;
+}
+
+.span {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: row;
+}
+
+.span-item {
+  text-align: center;
+  margin-left: 1em;
+  border-radius: 1em;
+  padding-top: 0.5em;
+  background-color: rgb(146, 167, 224);
+}
+
+.temp {
+  height: 1.5em;
+  width: 5em;
+}
+
+.country {
+  height: 1.5em;
+  width: 6em;
 }
