@@ -42,7 +42,8 @@
   margin-left: 1em;
   border-radius: 1em;
   padding-top: 0.5em;
-  background-color: rgb(146, 167, 224);
+  color: rgb(14, 37, 59);
+  background-color: #bad0e5;
 }
 
 .temp {

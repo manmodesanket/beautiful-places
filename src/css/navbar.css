@@ -13,9 +13,14 @@
   margin-left: 1%;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .btn {
   font-size: 1em;
-  border: 0.2em solid white;
+  border: 0.1em solid white;
   border-radius: 0.5em;
   height: 3em;
   width: 8em;

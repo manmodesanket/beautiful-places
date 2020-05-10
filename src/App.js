@@ -1,16 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Router, Link } from "@reach/router";
+import Add from "./components/Add";
+import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Describe from "./components/Describe";
-import Pictures from "./components/Pictures";
 import "./css/styles.css";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Describe />
-      <Pictures />
+      <Router>
+        <Home path="/" />
+        <Add path="/add" />
+      </Router>
     </div>
   );
 };
