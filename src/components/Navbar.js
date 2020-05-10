@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "@reach/router";
 import "../css/navbar.css";
 
 const Navbar = () => {
@@ -11,9 +12,9 @@ const Navbar = () => {
       </div>
       <div className="navitem">
         {" "}
-        <a href="/add">
+        <Link to="/add">
           <button className="btn">Add a Place</button>
-        </a>
+        </Link>
       </div>
     </nav>
   );
