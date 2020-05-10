@@ -3,10 +3,11 @@
   text-align: center;
 }
 
-.form {
+#form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   background-color: #fff;
   width: 50%;
   height: 300px;
@@ -17,14 +18,24 @@
 }
 
 input {
-  width: 80%;
   height: 30px;
   border: 0.1em solid;
   border-radius: 0.2em;
 }
 
+.btn1 {
+  font-size: 1em;
+  border: 0.1em solid white;
+  border-radius: 0.5em;
+  height: 3em;
+  width: 8em;
+  color: white;
+  cursor: pointer;
+  background-color: rgb(43, 168, 199);
+}
+
 @media only screen and (min-width: 600px) {
-  .form {
+  #form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -39,23 +50,16 @@ input {
 
   input {
     width: 100%;
-    height: 30px;
-    border: 0.1em solid;
-    border-radius: 0.2em;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .form {
+  #form {
     width: 50%;
     height: 300px;
     padding: 2em;
     border: 0.1em solid;
     border-radius: 0.25rem;
     margin: auto;
-  }
-
-  input {
-    width: 100%;
   }
 }

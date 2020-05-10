@@ -37,11 +37,10 @@ const Add = () => {
       img: img,
     };
     db.collection("cards")
-      .doc("place")
+      .doc(place)
       .set(data)
-      .then(() => {
-        console.log("Added Successfully");
-      });
+      .then(() => {});
+    document.getElementById(".form").reset();
   };
 
   useEffect(() => {
@@ -57,7 +56,7 @@ const Add = () => {
   if (user != null) {
     return (
       <div className="add">
-        <form className="form" onSubmit={handleplace}>
+        <form id="form" onSubmit={handleplace}>
           <input
             type="text"
             name="place"
@@ -86,31 +85,42 @@ const Add = () => {
             value={img}
             onChange={(e) => setImage(e.target.value)}
           />
-          <input type="submit" value="Submit" />
+          <button type="submit" className="btn1">
+            Submit
+          </button>
         </form>
 
-        <input type="submit" value="Logout" onClick={signOut} />
+        <button className="btn1" onClick={signOut}>
+          Logout
+        </button>
       </div>
     );
   } else {
     return (
-      <div className="add" onSubmit={formhandle}>
-        <form className="form">
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={pass}
-            onChange={(e) => setPass(e.target.value)}
-          />
-          <input type="submit" value="Submit" />
+      <div className="add">
+        <form id="form" onSubmit={formhandle}>
+          <label htmlFor="Emal">
+            Email:
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
+          <label htmlFor="password">
+            Password:
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={pass}
+              onChange={(e) => setPass(e.target.value)}
+            />
+          </label>
+
+          <button className="btn1">Login</button>
         </form>
       </div>
     );
