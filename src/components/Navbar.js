@@ -6,9 +6,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navitem">
-        <a href="/">
+        <Link href="/">
           <h1>Beautiful Places</h1>
-        </a>
+        </Link>
       </div>
       <div className="navitem">
         {" "}
